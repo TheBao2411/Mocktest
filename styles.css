@@ -1,0 +1,148 @@
+/* ====== Base Styles ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== Header ====== */
+.header {
+  background-color: #004aad;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.header__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+/* ====== Main ====== */
+.main__section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.main__section--hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f2f7ff;
+}
+
+.hero__content {
+  flex: 1 1 350px;
+  text-align: left;
+  padding: 1rem;
+}
+
+.hero__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004aad;
+}
+
+.hero__text {
+  margin-bottom: 1.5rem;
+}
+
+.hero__image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+/* ====== Button ====== */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.button--primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #0056b3;
+}
+
+/* ====== Benefits & Usage ====== */
+.section__title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #004aad;
+}
+
+.benefits__list {
+  list-style: none;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.usage__text {
+  font-size: 1.1rem;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main__section--hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+}
