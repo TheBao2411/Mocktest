@@ -7,49 +7,59 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ===== Header ===== -->
   <header class="header">
     <div class="header__container">
-      <h1 class="header__logo">MockTest Lite</h1>
-      <nav class="header__nav">
+      <h1 class="header__logo">MockTest<span class="header__logo--accent">Lite</span></h1>
+      <nav class="header__nav" aria-label="Main navigation">
         <ul class="header__menu">
-          <li class="header__item"><a href="#description" class="header__link">About</a></li>
+          <li class="header__item"><a href="#description" class="header__link">Description</a></li>
           <li class="header__item"><a href="#benefits" class="header__link">Benefits</a></li>
-          <li class="header__item"><a href="#usage" class="header__link">How To Use</a></li>
+          <li class="header__item"><a href="#usage" class="header__link">How to Use</a></li>
         </ul>
       </nav>
+      <a href="#usage" class="button button--outline">Sign Up</a>
     </div>
   </header>
 
   <!-- ===== Main ===== -->
-  <main class="main">
-    <section class="main__section main__section--hero" id="description">
+  <main class="main" id="main-content">
+    <!-- Hero / Description -->
+    <section class="hero main__section" id="description">
       <div class="hero__content">
-        <h2 class="hero__title">Prepare Smarter with MockTest Lite</h2>
+        <h2 class="hero__title">Reach Your <span>Best Test Score</span></h2>
         <p class="hero__text">
-          Get ready for your exams or certifications through realistic, timed mock tests designed to boost your confidence.
+          MockTest Lite helps you practice with realistic mock exams, smart analytics, and instant feedback — all in one simple platform.
         </p>
-        <a href="#usage" class="button button--primary">Start Now</a>
+        <a href="#usage" class="button button--primary">Start Free Practice</a>
       </div>
       <div class="hero__image">
-        <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" alt="Mock Test Illustration" />
+        <img src="https://cdn-icons-png.flaticon.com/512/6195/6195699.png" alt="Mascot illustration" />
       </div>
     </section>
 
-    <section class="main__section main__section--benefits" id="benefits">
+    <!-- Benefits -->
+    <section class="benefits main__section" id="benefits">
       <h2 class="section__title">Why Choose MockTest Lite?</h2>
-      <ul class="benefits__list">
-        <li class="benefits__item">✅ Real exam simulation experience</li>
-        <li class="benefits__item">✅ Instant score feedback</li>
-        <li class="benefits__item">✅ Track your improvement over time</li>
-      </ul>
+      <div class="benefits__grid">
+        <div class="benefits__item">🎯 Real Exam Simulation</div>
+        <div class="benefits__item">⚡ Instant Score Feedback</div>
+        <div class="benefits__item">📈 Progress Tracking</div>
+        <div class="benefits__item">💡 Study Tips & Resources</div>
+      </div>
     </section>
 
-    <section class="main__section main__section--usage" id="usage">
-      <h2 class="section__title">How to Use</h2>
-      <p class="usage__text">
-        1. Create your account → 2. Enter your test key → 3. Start your practice test → 4. Review your results and improve.
-      </p>
+    <!-- How to Use -->
+    <section class="usage main__section" id="usage">
+      <h2 class="section__title">How It Works</h2>
+      <ol class="usage__steps">
+        <li class="usage__step">1️⃣ Create your free account</li>
+        <li class="usage__step">2️⃣ Choose a test and start practicing</li>
+        <li class="usage__step">3️⃣ Review your results and improve</li>
+      </ol>
     </section>
   </main>
 
@@ -59,4 +69,3 @@
   </footer>
 </body>
 </html>
-    

@@ -1,4 +1,4 @@
-/* ====== Base Styles ====== */
+/* ===== Base Reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,78 +8,138 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
+  background: linear-gradient(to bottom right, #eef3ff, #fdfdff);
   color: #333;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
-/* ====== Header ====== */
+/* ===== Skip Link ===== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #004aad;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* ===== Header ===== */
 .header {
-  background-color: #004aad;
-  color: white;
-  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header__container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header__logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #004aad;
+}
+
+.header__logo--accent {
+  color: #007bff;
 }
 
 .header__menu {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 1.5rem;
 }
 
 .header__link {
-  color: white;
   text-decoration: none;
+  color: #333;
   font-weight: 500;
 }
 
+.header__link:focus,
 .header__link:hover {
-  text-decoration: underline;
+  color: #007bff;
+  outline: 2px solid #ffb703;
+  outline-offset: 2px;
 }
 
-/* ====== Main ====== */
-.main__section {
-  padding: 3rem 2rem;
-  text-align: center;
+/* ===== Buttons ===== */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-.main__section--hero {
+.button--primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background: #0056b3;
+}
+
+.button--outline {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.button--outline:hover,
+.button--outline:focus {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
   flex-wrap: wrap;
-  background-color: #f2f7ff;
-}
-
-.hero__content {
-  flex: 1 1 350px;
-  text-align: left;
-  padding: 1rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, #eef6ff, #f7faff);
 }
 
 .hero__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #222;
   margin-bottom: 1rem;
-  color: #004aad;
+}
+
+.hero__title span {
+  color: #007bff;
 }
 
 .hero__text {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hero__content {
+  flex: 1 1 400px;
 }
 
 .hero__image {
@@ -87,62 +147,67 @@ img {
   text-align: center;
 }
 
-/* ====== Button ====== */
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background 0.3s;
+/* ===== Benefits ===== */
+.benefits {
+  padding: 3rem 2rem;
+  background: #fff;
+  text-align: center;
 }
 
-.button--primary {
-  background-color: #007bff;
-  color: white;
-}
-
-.button--primary:hover {
-  background-color: #0056b3;
-}
-
-/* ====== Benefits & Usage ====== */
 .section__title {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
   color: #004aad;
+  margin-bottom: 1.5rem;
 }
 
-.benefits__list {
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.benefits__item {
+  background: #f2f6ff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* ===== Usage ===== */
+.usage {
+  padding: 3rem 2rem;
+  background: #f9fbff;
+  text-align: center;
+}
+
+.usage__steps {
   list-style: none;
+  margin-top: 1rem;
+  font-size: 1.1rem;
   line-height: 2;
-  font-size: 1.1rem;
 }
 
-.usage__text {
-  font-size: 1.1rem;
-}
-
-/* ====== Footer ====== */
+/* ===== Footer ===== */
 .footer {
-  background-color: #004aad;
-  color: white;
+  background: #004aad;
+  color: #fff;
   text-align: center;
   padding: 1rem;
 }
 
-/* ====== Responsive ====== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .header__container {
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
   }
 
-  .main__section--hero {
+  .hero {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero__content {
-    text-align: center;
+  .button {
+    width: 80%;
   }
 }
