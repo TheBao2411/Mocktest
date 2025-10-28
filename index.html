@@ -11,7 +11,7 @@
 <body>
 
   <div class="theme-toggle">
-    <input type="checkbox" id="theme-switch" />
+    <input type="checkbox" id="theme-switch" aria-label="Toggle theme" />
     <label for="theme-switch" class="theme-toggle__label">
       <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
       <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
@@ -40,7 +40,8 @@
           <a href="#signup" class="button button--large hero__cta">Get Started Free</a>
         </div>
         <div class="hero__image-wrapper">
-          <i class="fas fa-tasks hero__icon-image"></i> </div>
+          <i class="fas fa-tasks hero__icon-image"></i>
+        </div>
       </div>
     </section>
 
@@ -97,7 +98,7 @@
 
         <div class="search-box" id="search-box">
           <i class="fas fa-search search-box__icon"></i>
-          <input type="text" id="faq-search" class="search-box__input" placeholder="Search questions..." autocomplete="off" />
+          <input type="text" id="faq-search" class="search-box__input" placeholder="Search questions..." autocomplete="off" aria-label="Search frequently asked questions" />
           <div class="search-suggestions" id="suggestions">
             </div>
         </div>
@@ -114,6 +115,6 @@
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="scripts.js" type="module"></script>
 </body>
 </html>
