@@ -31,30 +31,30 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderFAQs(items) {
     faqList.innerHTML = items.map((faq, i) => `
       <div class="faq-item" data-index="${i}">
-        <button class="faq-question">
+        <button class="faq-item__question">
           <span>${faq.q}</span>
-          <i class="faq-icon fas fa-plus"></i>
+          <i class="faq-item__icon fas fa-plus"></i>
         </button>
-        <div class="faq-answer">
+        <div class="faq-item__answer">
           <p>${faq.a}</p>
         </div>
       </div>
     `).join('');
 
-    // Add click events
-    document.querySelectorAll('.faq-question').forEach(btn => {
+    // Add click events - **UPDATED SELECTORS FOR BEM**
+    document.querySelectorAll('.faq-item__question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const isActive = item.classList.contains('active');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
+        const answer = item.querySelector('.faq-item__answer'); // Updated
+        const icon = item.querySelector('.faq-item__icon'); // Updated
 
         // Close others
         document.querySelectorAll('.faq-item').forEach(other => {
           if (other !== item) {
             other.classList.remove('active');
-            other.querySelector('.faq-answer').style.maxHeight = null;
-            other.querySelector('.faq-icon').classList.replace('fa-minus', 'fa-plus');
+            other.querySelector('.faq-item__answer').style.maxHeight = null; // Updated
+            other.querySelector('.faq-item__icon').classList.replace('fa-minus', 'fa-plus'); // Updated
           }
         });
 
@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item) {
       item.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(() => {
-        item.querySelector('.faq-question').click();
+        // **UPDATED SELECTOR FOR BEM**
+        item.querySelector('.faq-item__question').click(); // Updated
       }, 500);
     }
   }
@@ -137,4 +138,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   });
-});
+}); 

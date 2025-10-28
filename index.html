@@ -3,62 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UniFAQ - Frequently Asked Questions</title>
+  <title>UniFAQ - Smart FAQ Landing Page</title>
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-  <!-- Dark Mode Toggle -->
   <div class="theme-toggle">
     <input type="checkbox" id="theme-switch" />
-    <label for="theme-switch">
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
+    <label for="theme-switch" class="theme-toggle__label">
+      <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+      <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
     </label>
   </div>
 
   <header class="header">
-    <div class="container">
-      <h1 class="logo"><a href="#" style="text-decoration:none; color:inherit;">UniFAQ</a></h1>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#usage">Usage</a>
-        <a href="#faq">FAQs</a>
+    <div class="container header__container">
+      <h1 class="header__logo"><a href="#">UniFAQ</a></h1>
+      <nav class="header__nav">
+        <a href="#features" class="header__nav-link">Features</a>
+        <a href="#usage" class="header__nav-link">Usage</a>
+        <a href="#faq" class="header__nav-link">FAQs</a>
       </nav>
+      <a href="#signup" class="button button--primary header__cta">Get Started</a>
     </div>
   </header>
 
   <main class="main">
-    <!-- Hero FAQ Section -->
-    <section class="hero-faq">
-      <div class="container">
-        <h2>Got a question? We’ve got answers.</h2>
-        <p class="subtitle">Search instantly with AI or browse popular questions below.</p>
 
-        <!-- AI Search Bar -->
-        <div class="search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" id="faq-search" placeholder="Search questions..." autocomplete="off" />
-          <div class="search-suggestions" id="suggestions"></div>
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h2 class="hero__title">Create a smart FAQ page<br>in minutes.</h2>
+          <p class="hero__subtitle">UniFAQ helps you turn messy questions into a beautiful, AI-searchable help center.</p>
+          <a href="#signup" class="button button--large hero__cta">Get Started Free</a>
+        </div>
+        <div class="hero__image-wrapper">
+          <i class="fas fa-tasks hero__icon-image"></i> </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h3 class="section-title">Features</h3>
+        <div class="features__grid">
+          <article class="features__item">
+            <i class="fas fa-search features__icon"></i>
+            <h4 class="features__item-title">Smart AI Search</h4>
+            <p class="features__item-text">Understands user intent, delivering accurate answers even with typos.</p>
+          </article>
+          <article class="features__item">
+            <i class="fas fa-palette features__icon"></i>
+            <h4 class="features__item-title">Flexible Customization</h4>
+            <p class="features__item-text">Change colors, fonts, and layout to perfectly match your brand.</p>
+          </article>
+          <article class="features__item">
+            <i class="fas fa-globe features__icon"></i>
+            <h4 class="features__item-title">Multi-language Support</h4>
+            <p class="features__item-text">Automatically detects and displays content in over 30 languages.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Accordion -->
+    <section id="usage" class="usage">
+      <div class="container">
+        <h3 class="section-title">How It Works</h3>
+        <div class="usage__steps">
+          <div class="usage__step">
+            <span class="usage__step-number">1</span>
+            <h4 class="usage__step-title">Add Questions</h4>
+            <p class="usage__step-text">Input your questions and answers into the UniFAQ dashboard.</p>
+          </div>
+          <div class="usage__step">
+            <span class="usage__step-number">2</span>
+            <h4 class="usage__step-title">Embed Code</h4>
+            <p class="usage__step-text">Copy a simple code snippet and paste it onto your website.</p>
+          </div>
+          <div class="usage__step">
+            <span class="usage__step-number">3</span>
+            <h4 class="usage__step-title">Done!</h4>
+            <p class="usage__step-text">Your customers now have a powerful, searchable FAQ page.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="faq" class="faq-section">
       <div class="container">
-        <div class="faq-grid" id="faq-list">
-          <!-- FAQ items injected by JS -->
+        <h2 class="section-title">Got a question? We’ve got answers.</h2>
+        <p class="subtitle">Search instantly with AI or browse popular questions below.</p>
+
+        <div class="search-box" id="search-box">
+          <i class="fas fa-search search-box__icon"></i>
+          <input type="text" id="faq-search" class="search-box__input" placeholder="Search questions..." autocomplete="off" />
+          <div class="search-suggestions" id="suggestions">
+            </div>
         </div>
+        
+        <div class="faq-list" id="faq-list">
+          </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 UniFAQ. All rights reserved.</p>
+    <div class="container footer__container">
+      <p class="footer__text">© 2025 UniFAQ. All rights reserved.</p>
     </div>
   </footer>
 
