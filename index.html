@@ -1,71 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MockTest Lite</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniFAQ - Frequently Asked Questions</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <!-- Skip to content -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ===== Header ===== -->
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </label>
+  </div>
+
   <header class="header">
-    <div class="header__container">
-      <h1 class="header__logo">MockTest<span class="header__logo--accent">Lite</span></h1>
-      <nav class="header__nav" aria-label="Main navigation">
-        <ul class="header__menu">
-          <li class="header__item"><a href="#description" class="header__link">Description</a></li>
-          <li class="header__item"><a href="#benefits" class="header__link">Benefits</a></li>
-          <li class="header__item"><a href="#usage" class="header__link">How to Use</a></li>
-        </ul>
+    <div class="container">
+      <h1 class="logo"><a href="#" style="text-decoration:none; color:inherit;">UniFAQ</a></h1>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#usage">Usage</a>
+        <a href="#faq">FAQs</a>
       </nav>
-      <a href="#usage" class="button button--outline">Sign Up</a>
     </div>
   </header>
 
-  <!-- ===== Main ===== -->
-  <main class="main" id="main-content">
-    <!-- Hero / Description -->
-    <section class="hero main__section" id="description">
-      <div class="hero__content">
-        <h2 class="hero__title">Reach Your <span>Best Test Score</span></h2>
-        <p class="hero__text">
-          MockTest Lite helps you practice with realistic mock exams, smart analytics, and instant feedback — all in one simple platform.
-        </p>
-        <a href="#usage" class="button button--primary">Start Free Practice</a>
-      </div>
-      <div class="hero__image">
-        <img src="https://cdn-icons-png.flaticon.com/512/6195/6195699.png" alt="Mascot illustration" />
+  <main class="main">
+    <!-- Hero FAQ Section -->
+    <section class="hero-faq">
+      <div class="container">
+        <h2>Got a question? We’ve got answers.</h2>
+        <p class="subtitle">Search instantly with AI or browse popular questions below.</p>
+
+        <!-- AI Search Bar -->
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="faq-search" placeholder="Search questions..." autocomplete="off" />
+          <div class="search-suggestions" id="suggestions"></div>
+        </div>
       </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="benefits main__section" id="benefits">
-      <h2 class="section__title">Why Choose MockTest Lite?</h2>
-      <div class="benefits__grid">
-        <div class="benefits__item">🎯 Real Exam Simulation</div>
-        <div class="benefits__item">⚡ Instant Score Feedback</div>
-        <div class="benefits__item">📈 Progress Tracking</div>
-        <div class="benefits__item">💡 Study Tips & Resources</div>
+    <!-- FAQ Accordion -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="faq-grid" id="faq-list">
+          <!-- FAQ items injected by JS -->
+        </div>
       </div>
-    </section>
-
-    <!-- How to Use -->
-    <section class="usage main__section" id="usage">
-      <h2 class="section__title">How It Works</h2>
-      <ol class="usage__steps">
-        <li class="usage__step">1️⃣ Create your free account</li>
-        <li class="usage__step">2️⃣ Choose a test and start practicing</li>
-        <li class="usage__step">3️⃣ Review your results and improve</li>
-      </ol>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="footer">
-    <p class="footer__text">© 2025 MockTest Lite. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 UniFAQ. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
